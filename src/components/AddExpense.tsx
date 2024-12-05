@@ -1,6 +1,4 @@
 import { useState } from "react";
-// import { db } from "../lib/db";
-
 import {
   Drawer,
   DrawerClose,
@@ -17,29 +15,34 @@ import { db } from "@/lib/db";
 
 export default function AddExpense() {
   const [name, setName] = useState("");
-  const [amount, setAmount] = useState(0);
-  // const [status, setStatus] = useState("");
+  const [amount, setAmount] = useState(""); // Keep empty string initially for number input
 
   async function addExpense() {
-    if (!name || amount <= 0) {
-      // setStatus("Please provide a valid name and amount greater than 0.");
+    // Check if name and amount are valid
+    if (!name || parseFloat(amount) <= 0) {
       return;
     }
 
     try {
       await db.expenses.add({
-        amount,
+        amount: parseFloat(amount), // Convert string to number when adding expense
         name,
       });
 
-      // setStatus(`Expense ${name} successfully added. Got id ${id}`);
-      setAmount(0);
-      setName("");
+      setAmount(""); // Reset the amount after adding the expense
+      setName(""); // Reset the name field
     } catch (e) {
       console.error(e);
-      // setStatus("Failed to add expense. Please try again.");
     }
   }
+
+  const handleAmountChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const value = e.target.value;
+    // Allow user to type a number (allow decimal values and empty input)
+    if (/^\d*\.?\d*$/.test(value)) {
+      setAmount(value);
+    }
+  };
 
   return (
     <div className="md:max-w-3xl w-full">
@@ -67,7 +70,7 @@ export default function AddExpense() {
                 type="number"
                 value={amount}
                 className="mt-2"
-                onChange={(e) => setAmount(parseFloat(e.target.value))}
+                onChange={handleAmountChange} // Updated handler for amount input
                 placeholder="Expense Amount"
               />
             </div>
@@ -82,8 +85,6 @@ export default function AddExpense() {
           </div>
         </DrawerContent>
       </Drawer>
-
-      {/* {status && <p>{status}</p>} */}
     </div>
   );
 }
