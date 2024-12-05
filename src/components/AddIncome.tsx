@@ -2,6 +2,7 @@ import { useState } from "react";
 import { db } from "../lib/db";
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import {
   Drawer,
   DrawerClose,
@@ -17,6 +18,8 @@ import { Input } from "./ui/input";
 
 =======
 >>>>>>> c6173b1 (Resolve merge conflicts)
+=======
+>>>>>>> c6173b12bdcfb5d199f99596b0e189c5d8fbd6ee
 export default function AddIncome() {
   const [name, setName] = useState("");
   const [amount, setAmount] = useState(0);
@@ -44,6 +47,7 @@ export default function AddIncome() {
   }
 
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
     <div className="md:max-w-3xl w-full">
       <Drawer>
@@ -89,6 +93,8 @@ export default function AddIncome() {
       {/* {status && <p>{status}</p>} */}
     </div>
 =======
+=======
+>>>>>>> c6173b12bdcfb5d199f99596b0e189c5d8fbd6ee
     <>
       <input
         type="text"
@@ -105,6 +111,9 @@ export default function AddIncome() {
       <button onClick={addIncome}>Add Income</button>
       {status && <p>{status}</p>}
     </>
+<<<<<<< HEAD
 >>>>>>> c6173b1 (Resolve merge conflicts)
+=======
+>>>>>>> c6173b12bdcfb5d199f99596b0e189c5d8fbd6ee
   );
 }

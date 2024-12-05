@@ -3,6 +3,7 @@ import AddExpense from "./components/AddExpense";
 import AddIncome from "./components/AddIncome";
 import QueryExpense from "./components/QueryExpense";
 <<<<<<< HEAD
+<<<<<<< HEAD
 import ListExpense from "./components/ListExpense";
 import { ThemeProvider } from "./components/theme-provider";
 import { ModeToggle } from "./components/mode-toggle";
@@ -37,6 +38,8 @@ function App() {
       </div>
     </ThemeProvider>
 =======
+=======
+>>>>>>> c6173b12bdcfb5d199f99596b0e189c5d8fbd6ee
 
 function App() {
   return (
@@ -50,7 +53,10 @@ function App() {
       <AddExpense />
       <QueryExpense />
     </>
+<<<<<<< HEAD
 >>>>>>> c6173b1 (Resolve merge conflicts)
+=======
+>>>>>>> c6173b12bdcfb5d199f99596b0e189c5d8fbd6ee
   );
 }
 

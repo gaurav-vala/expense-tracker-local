@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 =======
 <<<<<<< HEAD
@@ -13,6 +14,10 @@
 # expense-tracker-local
 =======
 >>>>>>> c6173b1 (Resolve merge conflicts)
+=======
+# expense-tracker-local
+=======
+>>>>>>> c6173b12bdcfb5d199f99596b0e189c5d8fbd6ee
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
@@ -34,18 +39,24 @@ export default tseslint.config({
     // other options...
     parserOptions: {
 <<<<<<< HEAD
+<<<<<<< HEAD
       project: ["./tsconfig.node.json", "./tsconfig.app.json"],
       tsconfigRootDir: import.meta.dirname,
     },
   },
 });
 =======
+=======
+>>>>>>> c6173b12bdcfb5d199f99596b0e189c5d8fbd6ee
       project: ['./tsconfig.node.json', './tsconfig.app.json'],
       tsconfigRootDir: import.meta.dirname,
     },
   },
 })
+<<<<<<< HEAD
 >>>>>>> c6173b1 (Resolve merge conflicts)
+=======
+>>>>>>> c6173b12bdcfb5d199f99596b0e189c5d8fbd6ee
 ```
 
 - Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
@@ -55,18 +66,24 @@ export default tseslint.config({
 ```js
 // eslint.config.js
 <<<<<<< HEAD
+<<<<<<< HEAD
 import react from "eslint-plugin-react";
 
 export default tseslint.config({
   // Set the react version
   settings: { react: { version: "18.3" } },
 =======
+=======
+>>>>>>> c6173b12bdcfb5d199f99596b0e189c5d8fbd6ee
 import react from 'eslint-plugin-react'
 
 export default tseslint.config({
   // Set the react version
   settings: { react: { version: '18.3' } },
+<<<<<<< HEAD
 >>>>>>> c6173b1 (Resolve merge conflicts)
+=======
+>>>>>>> c6173b12bdcfb5d199f99596b0e189c5d8fbd6ee
   plugins: {
     // Add the react plugin
     react,
@@ -75,6 +92,7 @@ export default tseslint.config({
     // other rules...
     // Enable its recommended rules
     ...react.configs.recommended.rules,
+<<<<<<< HEAD
 <<<<<<< HEAD
     ...react.configs["jsx-runtime"].rules,
   },
@@ -88,9 +106,14 @@ export default tseslint.config({
 # expense-tracker-local
 >>>>>>> Stashed changes
 =======
+=======
+>>>>>>> c6173b12bdcfb5d199f99596b0e189c5d8fbd6ee
     ...react.configs['jsx-runtime'].rules,
   },
 })
 ```
 >>>>>>> 7664af9 (Dexie Init Commit)
+<<<<<<< HEAD
 >>>>>>> c6173b1 (Resolve merge conflicts)
+=======
+>>>>>>> c6173b12bdcfb5d199f99596b0e189c5d8fbd6ee

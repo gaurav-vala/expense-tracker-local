@@ -4,6 +4,7 @@
     { "path": "./tsconfig.app.json" },
     { "path": "./tsconfig.node.json" }
 <<<<<<< HEAD
+<<<<<<< HEAD
   ],
   "compilerOptions": {
     "baseUrl": ".",
@@ -14,4 +15,7 @@
 =======
   ]
 >>>>>>> c6173b1 (Resolve merge conflicts)
+=======
+  ]
+>>>>>>> c6173b12bdcfb5d199f99596b0e189c5d8fbd6ee
 }
