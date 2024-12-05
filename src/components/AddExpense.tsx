@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { db } from "../lib/db";
+// import { db } from "../lib/db";
 
 import {
   Drawer,
@@ -17,26 +17,26 @@ import { Input } from "./ui/input";
 export default function AddExpense() {
   const [name, setName] = useState("");
   const [amount, setAmount] = useState(0);
-  const [status, setStatus] = useState("");
+  // const [status, setStatus] = useState("");
 
   async function addExpense() {
     if (!name || amount <= 0) {
-      setStatus("Please provide a valid name and amount greater than 0.");
+      // setStatus("Please provide a valid name and amount greater than 0.");
       return;
     }
 
     try {
-      const id = await db.expenses.add({
-        amount,
-        name,
-      });
+      // const id = await db.expenses.add({
+      //   amount,
+      //   name,
+      // });
 
-      setStatus(`Expense ${name} successfully added. Got id ${id}`);
+      // setStatus(`Expense ${name} successfully added. Got id ${id}`);
       setAmount(0);
       setName("");
     } catch (e) {
       console.error(e);
-      setStatus("Failed to add expense. Please try again.");
+      // setStatus("Failed to add expense. Please try again.");
     }
   }
 

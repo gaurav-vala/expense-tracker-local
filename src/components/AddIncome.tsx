@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { db } from "../lib/db";
+// import { db } from "../lib/db";
 
 import {
   Drawer,
@@ -17,26 +17,26 @@ import { Input } from "./ui/input";
 export default function AddIncome() {
   const [name, setName] = useState("");
   const [amount, setAmount] = useState(0);
-  const [status, setStatus] = useState("");
+  // const [status, setStatus] = useState("");
 
   async function addIncome() {
     if (!name || amount <= 0) {
-      setStatus("Please provide a valid name and amount greater than 0.");
+      // setStatus("Please provide a valid name and amount greater than 0.");
       return;
     }
 
     try {
-      const id = await db.incomes.add({
-        amount,
-        name,
-      });
+      // const id = await db.incomes.add({
+      //   amount,
+      //   name,
+      // });
 
-      setStatus(`Income ${name} successfully added. Got id ${id}`);
+      // setStatus(`Income ${name} successfully added. Got id ${id}`);
       setAmount(0);
       setName("");
     } catch (e) {
       console.error(e);
-      setStatus("Failed to add income. Please try again.");
+      // setStatus("Failed to add income. Please try again.");
     }
   }
 
