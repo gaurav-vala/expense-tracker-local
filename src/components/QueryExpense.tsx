@@ -4,7 +4,6 @@ import { Button } from "./ui/button";
 
 import { motion, AnimatePresence } from "framer-motion";
 
-
 export default function QueryExpense() {
   const expenses = useLiveQuery(() => db.expenses.toArray(), []);
   const incomes = useLiveQuery(() => db.incomes.toArray(), []);
@@ -18,6 +17,10 @@ export default function QueryExpense() {
     // console.log(id);
     await db.expenses.delete(id);
   }
+
+  const formatCurrency = (amount: number) => {
+    return amount.toLocaleString(); // Adds commas for thousands
+  };
   return (
     <>
       <ul>
@@ -60,7 +63,10 @@ export default function QueryExpense() {
                   <span className="block font-semibold text-xl tracking-tighter">
                     {expense.name}
                   </span>
-                  <span className="block font-medium">{expense.amount}</span>
+                  <span className="block font-medium">
+                    {" "}
+                    {formatCurrency(expense.amount)}
+                  </span>
                 </p>
               </div>
 
@@ -121,7 +127,9 @@ export default function QueryExpense() {
                   <span className="block font-semibold text-xl tracking-tighter">
                     {income.name}
                   </span>
-                  <span className="block font-medium">{income.amount}</span>
+                  <span className="block font-medium">
+                    ₹ {formatCurrency(income.amount)}
+                  </span>
                 </p>
               </div>
 
@@ -148,6 +156,6 @@ export default function QueryExpense() {
           ))}
         </AnimatePresence>
       </ul>
-</>
+    </>
   );
 }
