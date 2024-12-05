@@ -13,6 +13,7 @@ import {
 } from "@/components/ui/drawer";
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
+import { db } from "@/lib/db";
 
 export default function AddExpense() {
   const [name, setName] = useState("");
@@ -26,10 +27,10 @@ export default function AddExpense() {
     }
 
     try {
-      // const id = await db.expenses.add({
-      //   amount,
-      //   name,
-      // });
+      await db.expenses.add({
+        amount,
+        name,
+      });
 
       // setStatus(`Expense ${name} successfully added. Got id ${id}`);
       setAmount(0);
@@ -74,11 +75,9 @@ export default function AddExpense() {
               <DrawerClose asChild={true}>
                 <Button onClick={addExpense}>Add Expense</Button>
               </DrawerClose>
-              <DrawerClose>
-                <Button variant="outline" className="w-full">
-                  Cancel
-                </Button>
-              </DrawerClose>
+              <Button variant="outline" className="w-full">
+                Cancel
+              </Button>
             </DrawerFooter>
           </div>
         </DrawerContent>

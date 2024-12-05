@@ -3,7 +3,6 @@ import { useState } from "react";
 
 import {
   Drawer,
-  DrawerClose,
   DrawerContent,
   DrawerDescription,
   DrawerFooter,
@@ -13,6 +12,7 @@ import {
 } from "@/components/ui/drawer";
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
+import { db } from "@/lib/db";
 
 export default function AddIncome() {
   const [name, setName] = useState("");
@@ -26,10 +26,10 @@ export default function AddIncome() {
     }
 
     try {
-      // const id = await db.incomes.add({
-      //   amount,
-      //   name,
-      // });
+      await db.incomes.add({
+        amount,
+        name,
+      });
 
       // setStatus(`Income ${name} successfully added. Got id ${id}`);
       setAmount(0);
@@ -72,11 +72,9 @@ export default function AddIncome() {
             </div>
             <DrawerFooter>
               <Button onClick={addIncome}>Add Income</Button>
-              <DrawerClose>
-                <Button variant="outline" className="w-full">
-                  Cancel
-                </Button>
-              </DrawerClose>
+              <Button variant="outline" className="w-full">
+                Cancel
+              </Button>
             </DrawerFooter>
           </div>
         </DrawerContent>
@@ -84,21 +82,5 @@ export default function AddIncome() {
 
       {/* {status && <p>{status}</p>} */}
     </div>
-    // <>
-    //   <input
-    //     type="text"
-    //     placeholder="Income Name"
-    //     value={name}
-    //     onChange={(e) => setName(e.target.value)}
-    //   />
-    //   <input
-    //     type="number"
-    //     value={amount}
-    //     onChange={(e) => setAmount(parseFloat(e.target.value))}
-    //     placeholder="Income Amount"
-    //   />
-    //   <button onClick={addIncome}>Add Income</button>
-    //   {status && <p>{status}</p>}
-    // </>
   );
 }
