@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 =======
 <<<<<<< HEAD
@@ -7,6 +8,11 @@
 =======
 
 >>>>>>> Stashed changes
+=======
+<<<<<<< HEAD
+# expense-tracker-local
+=======
+>>>>>>> c6173b1 (Resolve merge conflicts)
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
@@ -27,11 +33,19 @@ export default tseslint.config({
   languageOptions: {
     // other options...
     parserOptions: {
+<<<<<<< HEAD
       project: ["./tsconfig.node.json", "./tsconfig.app.json"],
       tsconfigRootDir: import.meta.dirname,
     },
   },
 });
+=======
+      project: ['./tsconfig.node.json', './tsconfig.app.json'],
+      tsconfigRootDir: import.meta.dirname,
+    },
+  },
+})
+>>>>>>> c6173b1 (Resolve merge conflicts)
 ```
 
 - Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
@@ -40,11 +54,19 @@ export default tseslint.config({
 
 ```js
 // eslint.config.js
+<<<<<<< HEAD
 import react from "eslint-plugin-react";
 
 export default tseslint.config({
   // Set the react version
   settings: { react: { version: "18.3" } },
+=======
+import react from 'eslint-plugin-react'
+
+export default tseslint.config({
+  // Set the react version
+  settings: { react: { version: '18.3' } },
+>>>>>>> c6173b1 (Resolve merge conflicts)
   plugins: {
     // Add the react plugin
     react,
@@ -53,6 +75,7 @@ export default tseslint.config({
     // other rules...
     // Enable its recommended rules
     ...react.configs.recommended.rules,
+<<<<<<< HEAD
     ...react.configs["jsx-runtime"].rules,
   },
 });
@@ -64,3 +87,10 @@ export default tseslint.config({
 
 # expense-tracker-local
 >>>>>>> Stashed changes
+=======
+    ...react.configs['jsx-runtime'].rules,
+  },
+})
+```
+>>>>>>> 7664af9 (Dexie Init Commit)
+>>>>>>> c6173b1 (Resolve merge conflicts)

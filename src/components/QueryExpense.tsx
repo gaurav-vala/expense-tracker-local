@@ -1,13 +1,17 @@
 import { useLiveQuery } from "dexie-react-hooks";
 import { db } from "../lib/db";
+<<<<<<< HEAD
 import { Button } from "./ui/button";
 
 import { motion, AnimatePresence } from "framer-motion";
+=======
+>>>>>>> c6173b1 (Resolve merge conflicts)
 
 export default function QueryExpense() {
   const expenses = useLiveQuery(() => db.expenses.toArray(), []);
   const incomes = useLiveQuery(() => db.incomes.toArray(), []);
 
+<<<<<<< HEAD
   async function deleteIncomeRecord(id: number) {
     // console.log(id);
     await db.incomes.delete(id);
@@ -17,10 +21,18 @@ export default function QueryExpense() {
     // console.log(id);
     await db.expenses.delete(id);
   }
+=======
+  const totalExpenses =
+    expenses?.reduce((total, expense) => total + expense.amount, 0) || 0;
+  const totalIncomes =
+    incomes?.reduce((total, income) => total + income.amount, 0) || 0;
+  const remainingIncome = totalIncomes - totalExpenses;
+>>>>>>> c6173b1 (Resolve merge conflicts)
 
   return (
     <>
       <ul>
+<<<<<<< HEAD
         <AnimatePresence>
           {expenses?.map((expense) => (
             // <li
@@ -148,6 +160,24 @@ export default function QueryExpense() {
           ))}
         </AnimatePresence>
       </ul>
+=======
+        {expenses?.map((expense) => (
+          <li key={expense.id}>
+            {expense.name}, {expense.amount}
+          </li>
+        ))}
+      </ul>
+      <ul>
+        {incomes?.map((income) => (
+          <li key={income.id}>
+            {income.name}, {income.amount}
+          </li>
+        ))}
+      </ul>
+      <p>Total Expenses: {totalExpenses}</p>
+      <p>Total Incomes: {totalIncomes}</p>
+      <p>Remaining Income: {remainingIncome}</p>
+>>>>>>> c6173b1 (Resolve merge conflicts)
     </>
   );
 }

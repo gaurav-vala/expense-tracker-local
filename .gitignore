@@ -4,8 +4,12 @@ logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 =======
+=======
+<<<<<<< HEAD
+>>>>>>> c6173b1 (Resolve merge conflicts)
 lerna-debug.log*
 .pnpm-debug.log*
 
@@ -130,6 +134,7 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+<<<<<<< HEAD
 
 # Logs
 logs
@@ -264,6 +269,9 @@ dist
 .pnp.*
 =======
 >>>>>>> Stashed changes
+=======
+=======
+>>>>>>> c6173b1 (Resolve merge conflicts)
 pnpm-debug.log*
 lerna-debug.log*
 
@@ -282,3 +290,7 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+<<<<<<< HEAD
+=======
+>>>>>>> 7664af9 (Dexie Init Commit)
+>>>>>>> c6173b1 (Resolve merge conflicts)

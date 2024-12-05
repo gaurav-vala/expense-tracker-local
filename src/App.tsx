@@ -2,6 +2,7 @@ import "./App.css";
 import AddExpense from "./components/AddExpense";
 import AddIncome from "./components/AddIncome";
 import QueryExpense from "./components/QueryExpense";
+<<<<<<< HEAD
 import ListExpense from "./components/ListExpense";
 import { ThemeProvider } from "./components/theme-provider";
 import { ModeToggle } from "./components/mode-toggle";
@@ -35,6 +36,21 @@ function App() {
         </div>
       </div>
     </ThemeProvider>
+=======
+
+function App() {
+  return (
+    <>
+      <h1>My simple Dexie app</h1>
+
+      <AddIncome />
+
+      <br />
+
+      <AddExpense />
+      <QueryExpense />
+    </>
+>>>>>>> c6173b1 (Resolve merge conflicts)
   );
 }
 

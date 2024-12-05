@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { db } from "@/lib/db";
 import { useLiveQuery } from "dexie-react-hooks";
 
@@ -20,4 +21,8 @@ export default function ListExpense() {
       </div>
     </>
   );
+=======
+export default function ListExpense() {
+  return <></>;
+>>>>>>> c6173b1 (Resolve merge conflicts)
 }
