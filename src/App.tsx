@@ -10,10 +10,10 @@ function App() {
   // const [theme, setTheme] = useState<Theme>(() => "dark");
   return (
     <ThemeProvider>
-      <div className="container md:max-w-5xl mx-auto px-5 my-8">
-        <div className="flex gap-8 justify-between">
+      <div className="container px-5 mx-auto mt-6 mb-8 md:max-w-5xl">
+        <div className="flex justify-between gap-8">
           <div>
-            <h1 className="font-extrabold text-3xl tracking-tighter">
+            <h1 className="text-3xl font-extrabold tracking-tighter">
               My Minimal Expense Tracker
             </h1>
             <p className="text-neutral-400">
@@ -26,7 +26,7 @@ function App() {
 
         <ListExpense />
 
-        <div className="flex items-center flex-col gap-4 mt-11 fixed bottom-0 w-full left-0 px-5 py-4 bg-white dark:bg-neutral-950 border border-t-2">
+        <div className="flex items-center w-full gap-4 mt-4 dark:bg-neutral-950">
           <AddIncome />
           <AddExpense />
         </div>

@@ -52,13 +52,13 @@ export default function AddIncome() {
   }
 
   return (
-    <div className="md:max-w-3xl w-full">
+    <div className="w-full md:max-w-3xl">
       <Drawer>
-        <DrawerTrigger className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-lg font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 bg-primary text-primary-foreground shadow hover:bg-primary/90 px-4 py-3 w-full">
+        <DrawerTrigger className="w-full px-3 py-2 text-lg font-bold tracking-tighter text-black rounded-full bg-neutral-200">
           Add Income
         </DrawerTrigger>
         <DrawerContent>
-          <div className="max-w-sm mx-auto w-full">
+          <div className="w-full max-w-sm mx-auto">
             <DrawerHeader>
               <DrawerTitle>Add Income!</DrawerTitle>
               <DrawerDescription>
@@ -81,7 +81,7 @@ export default function AddIncome() {
                 placeholder="Income Amount"
               />
               {/* Show error message if any */}
-              {error && <p className="text-red-500 text-sm">{error}</p>}
+              {error && <p className="text-sm text-red-500">{error}</p>}
             </div>
             <DrawerFooter>
               <Button onClick={addIncome}>Add Income</Button>

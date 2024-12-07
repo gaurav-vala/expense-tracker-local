@@ -28,7 +28,7 @@ export default function QueryExpense() {
           {expenses?.map((expense) => (
             // <li
             //   key={expense.id}
-            //   className="border border-red-400 bg-red-100 p-4 rounded-md mt-3"
+            //   className="p-4 mt-3 bg-red-100 border border-red-400 rounded-md"
             // >
             //   {expense.name}, {expense.amount}
             // </li>
@@ -38,10 +38,10 @@ export default function QueryExpense() {
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: -20 }}
               transition={{ duration: 0.2, ease: "circIn" }}
-              className="flex items-center justify-between p-4 rounded-md mt-3 border border-neutral-200 dark:border-neutral-500"
+              className="flex items-center justify-between p-4 mt-3 rounded-2xl bg-neutral-900 "
             >
               <div className="flex items-center gap-3">
-                <p className="border border-red-400 bg-red-50 text-red-400 p-2 rounded-lg inline-block">
+                <p className="inline-block p-2 text-red-400 border border-red-400 rounded-lg bg-red-50">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
@@ -60,12 +60,12 @@ export default function QueryExpense() {
                   </svg>
                 </p>
                 <p>
-                  <span className="block font-semibold text-xl tracking-tighter">
+                  <span className="block text-xl font-semibold tracking-tighter">
                     {expense.name}
                   </span>
                   <span className="block font-medium">
                     {" "}
-                    {formatCurrency(expense.amount)}
+                    ₹{formatCurrency(expense.amount)}
                   </span>
                 </p>
               </div>
@@ -73,7 +73,7 @@ export default function QueryExpense() {
               {/* DELETE BTN */}
               <Button
                 variant={"secondary"}
-                className="px-4 py-4 bg-red-50 text-red-500"
+                className="px-4 py-4 text-red-500 bg-red-50"
                 onClick={() => deleteExpenseRecord(expense.id)}
               >
                 <svg
@@ -102,10 +102,10 @@ export default function QueryExpense() {
               exit={{ opacity: 0, x: -20 }}
               transition={{ duration: 0.2, ease: "circInOut" }}
               key={income.id}
-              className="flex items-center justify-between p-4 rounded-md mt-3 border border-neutral-200 dark:border-neutral-500"
+              className="flex items-center justify-between p-4 mt-3 rounded-2xl bg-neutral-900 "
             >
               <div className="flex items-center gap-3">
-                <p className="border border-green-400 bg-green-100 text-green-400 p-2 rounded-lg inline-block">
+                <p className="inline-block p-2 text-green-400 bg-green-100 border border-green-400 rounded-lg">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
@@ -124,11 +124,11 @@ export default function QueryExpense() {
                   </svg>
                 </p>
                 <p>
-                  <span className="block font-semibold text-xl tracking-tighter">
+                  <span className="block text-xl font-semibold tracking-tighter">
                     {income.name}
                   </span>
                   <span className="block font-medium">
-                    ₹ {formatCurrency(income.amount)}
+                    ₹{formatCurrency(income.amount)}
                   </span>
                 </p>
               </div>
@@ -136,7 +136,7 @@ export default function QueryExpense() {
               {/* DELETE BTN */}
               <Button
                 variant={"secondary"}
-                className="px-4 py-4 bg-red-100 text-red-500"
+                className="px-4 py-4 text-red-500 bg-red-100"
                 onClick={() => deleteIncomeRecord(income.id)}
               >
                 <svg

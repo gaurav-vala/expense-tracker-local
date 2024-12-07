@@ -18,19 +18,33 @@ export default function ListExpense() {
 
   return (
     <>
-      <div className="border border-neutral-200 rounded-lg p-4 mt-4 sticky top-4 bg-white dark:bg-neutral-900 dark:border-neutral-600">
-        <p className="text-xl ">
-          <span className="font-bold tracking-tight">Total Expenses: </span>
-          <span className=""> ₹{formatCurrency(totalExpenses)}</span>
-        </p>
-        <p className="text-xl ">
-          <span className="font-bold tracking-tight">Total Incomes:</span>{" "}
-          <span className=""> ₹{formatCurrency(totalIncomes)}</span>
-        </p>
-        <p className="text-xl">
-          <span className="font-bold tracking-tight">Remaining Income:</span> ₹
-          {formatCurrency(remainingIncome)}
-        </p>
+      <div className="sticky mt-4 overflow-hidden bg-white rounded-xl top-4 dark:bg-neutral-900">
+        <div className="p-4 px-9">
+          <p className="text-sm tracking-tight text-neutral-400 ">
+            Remaining Income
+          </p>
+          <p className="mt-1 text-3xl font-semibold">
+            ₹{formatCurrency(remainingIncome)}
+          </p>
+        </div>
+        <div className="flex items-center justify-between p-4 px-9 dark:bg-neutral-800">
+          <p>
+            <span className="block text-sm tracking-tight text-neutral-400">
+              Total Expenses
+            </span>
+            <span className="block mt-1 text-xl font-semibold">
+              ₹{formatCurrency(totalExpenses)}
+            </span>
+          </p>
+          <p>
+            <span className="block text-sm tracking-tight text-neutral-400">
+              Total Incomes
+            </span>
+            <span className="block mt-1 text-xl font-semibold">
+              ₹{formatCurrency(totalIncomes)}
+            </span>
+          </p>
+        </div>
       </div>
     </>
   );
