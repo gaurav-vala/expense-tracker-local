@@ -3,15 +3,11 @@ import { db } from "../lib/db";
 import { Button } from "./ui/button";
 
 import { motion, AnimatePresence } from "framer-motion";
+import SingleExpenseItem from "./SingleExpenseItem";
 
 export default function QueryExpense() {
   const expenses = useLiveQuery(() => db.expenses.toArray(), []);
   const incomes = useLiveQuery(() => db.incomes.toArray(), []);
-
-  async function deleteIncomeRecord(id: number) {
-    // console.log(id);
-    await db.incomes.delete(id);
-  }
 
   async function deleteExpenseRecord(id: number) {
     // console.log(id);
@@ -26,19 +22,13 @@ export default function QueryExpense() {
       <ul>
         <AnimatePresence>
           {expenses?.map((expense) => (
-            // <li
-            //   key={expense.id}
-            //   className="p-4 mt-3 bg-red-100 border border-red-400 rounded-md"
-            // >
-            //   {expense.name}, {expense.amount}
-            // </li>
             <motion.li
               key={expense.id}
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: -20 }}
               transition={{ duration: 0.2, ease: "circIn" }}
-              className="flex items-center justify-between p-4 mt-3 rounded-2xl bg-neutral-900 "
+              className="flex items-center justify-between p-4 mt-3 rounded-2xl dark:bg-neutral-900 bg-neutral-100"
             >
               <div className="flex items-center gap-3">
                 <p className="inline-block p-2 text-red-400 border border-red-400 rounded-lg bg-red-50">
@@ -102,7 +92,7 @@ export default function QueryExpense() {
               exit={{ opacity: 0, x: -20 }}
               transition={{ duration: 0.2, ease: "circInOut" }}
               key={income.id}
-              className="flex items-center justify-between p-4 mt-3 rounded-2xl bg-neutral-900 "
+              className="flex items-center justify-between p-4 mt-3 rounded-2xl dark:bg-neutral-900 bg-neutral-100"
             >
               <div className="flex items-center gap-3">
                 <p className="inline-block p-2 text-green-400 bg-green-100 border border-green-400 rounded-lg">
@@ -123,8 +113,8 @@ export default function QueryExpense() {
                     <path d="M14 7l7 0l0 7" />
                   </svg>
                 </p>
-                <p>
-                  <span className="block text-xl font-semibold tracking-tighter">
+                <p className="text-wrap">
+                  <span className="block w-full text-xl font-semibold tracking-tighter">
                     {income.name}
                   </span>
                   <span className="block font-medium">
@@ -133,7 +123,6 @@ export default function QueryExpense() {
                 </p>
               </div>
 
-              {/* DELETE BTN */}
               <Button
                 variant={"secondary"}
                 className="px-4 py-4 text-red-500 bg-red-100"

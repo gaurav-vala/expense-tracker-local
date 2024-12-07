@@ -47,7 +47,7 @@ export default function AddExpense() {
   return (
     <div className="w-full md:max-w-3xl">
       <Drawer>
-        <DrawerTrigger className="w-full px-3 py-2 text-lg font-bold tracking-tighter text-black rounded-full bg-neutral-200">
+        <DrawerTrigger className="w-full px-3 py-2 text-lg font-bold tracking-tighter text-white bg-black rounded-full dark:text-black dark:bg-neutral-200">
           Add Expense
         </DrawerTrigger>
         <DrawerContent>
