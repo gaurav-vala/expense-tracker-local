@@ -3,7 +3,7 @@ import { db } from "../lib/db";
 import { Button } from "./ui/button";
 
 import { motion, AnimatePresence } from "framer-motion";
-import SingleExpenseItem from "./SingleExpenseItem";
+// import SingleExpenseItem from "./SingleExpenseItem";
 
 export default function QueryExpense() {
   const expenses = useLiveQuery(() => db.expenses.toArray(), []);
@@ -12,6 +12,11 @@ export default function QueryExpense() {
   async function deleteExpenseRecord(id: number) {
     // console.log(id);
     await db.expenses.delete(id);
+  }
+
+  async function deleteIncomeRecord(id: number) {
+    // console.log(id);
+    await db.incomes.delete(id);
   }
 
   const formatCurrency = (amount: number) => {
