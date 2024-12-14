@@ -60,13 +60,11 @@ const SingleExpenseItem: React.FC<SingleExpenseItemProps> = ({
       {/* DELETE BTN */}
       <Button
         variant={"secondary"}
-        className="px-4 py-4 text-red-500 bg-red-100"
+        className=""
         onClick={() => deleteIncomeRecord(data.id)}
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
           viewBox="0 0 24 24"
           fill="currentColor"
           className="icon icon-tabler icons-tabler-filled icon-tabler-trash-x"

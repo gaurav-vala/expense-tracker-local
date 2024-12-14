@@ -29,10 +29,10 @@ export default function QueryExpense() {
           {expenses?.map((expense) => (
             <motion.li
               key={expense.id}
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: -20 }}
-              transition={{ duration: 0.2, ease: "circIn" }}
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.2, ease: "circInOut" }}
               className="flex items-center justify-between p-4 mt-3 rounded-2xl dark:bg-neutral-900 bg-neutral-100"
             >
               <div className="flex items-center gap-3">
@@ -68,7 +68,7 @@ export default function QueryExpense() {
               {/* DELETE BTN */}
               <Button
                 variant={"secondary"}
-                className="px-4 py-4 text-red-500 bg-red-50"
+                className="px-4 py-4 text-red-500 bg-red-100 h-11"
                 onClick={() => deleteExpenseRecord(expense.id)}
               >
                 <svg
@@ -92,9 +92,9 @@ export default function QueryExpense() {
         <AnimatePresence>
           {incomes?.map((income) => (
             <motion.li
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: -20 }}
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.2, ease: "circInOut" }}
               key={income.id}
               className="flex items-center justify-between p-4 mt-3 rounded-2xl dark:bg-neutral-900 bg-neutral-100"
@@ -130,7 +130,7 @@ export default function QueryExpense() {
 
               <Button
                 variant={"secondary"}
-                className="px-4 py-4 text-red-500 bg-red-100"
+                className="px-4 py-4 text-red-500 bg-red-100 h-11"
                 onClick={() => deleteIncomeRecord(income.id)}
               >
                 <svg

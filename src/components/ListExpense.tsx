@@ -19,13 +19,13 @@ export default function ListExpense() {
   };
 
   return (
-    <div className="sticky top-4">
-      <div className="mt-4 overflow-hidden bg-neutral-100 rounded-xl dark:bg-neutral-900">
+    <div className="sticky top-4 ">
+      <div className="mt-6 overflow-hidden rounded-b-none bg-neutral-100 rounded-xl dark:bg-neutral-900">
         <div className="p-4 px-9">
           <p className="text-2xl tracking-tight text-neutral-400 noto-serif-display">
             Remaining Income
           </p>
-          <p className="mt-1 text-3xl font-semibold text-wrap">
+          <p className="mt-1 text-3xl font-bold tracking-tighter text-wrap">
             ₹{formatCurrency(remainingIncome)}
           </p>
         </div>
@@ -34,7 +34,7 @@ export default function ListExpense() {
             <span className="block text-xl tracking-tight text-neutral-400 noto-serif-display">
               Total Income
             </span>
-            <span className="block mt-1 text-xl font-semibold">
+            <span className="block mt-1 text-xl font-semibold tracking-tighter">
               ₹{formatCurrency(totalIncomes)}
             </span>
           </p>
@@ -48,7 +48,7 @@ export default function ListExpense() {
           </p>
         </div>
       </div>
-      <div className="flex items-center w-full gap-4 mt-4 dark:bg-neutral-950">
+      <div className="flex items-center w-full gap-4 p-2 border-t border-neutral-300 dark:border-neutral-900 bg-neutral-200 dark:bg-neutral-800 rounded-b-xl">
         <AddIncome />
         <AddExpense />
       </div>

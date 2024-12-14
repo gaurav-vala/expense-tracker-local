@@ -4,19 +4,21 @@ import ListExpense from "./components/ListExpense";
 import { ThemeProvider } from "./components/theme-provider";
 import { ModeToggle } from "./components/mode-toggle";
 
+import { BadgeIndianRupee } from "lucide-react";
+
 function App() {
   // const [theme, setTheme] = useState<Theme>(() => "dark");
+
   return (
     <ThemeProvider>
       <div className="container px-5 mx-auto mt-6 mb-8 sm:max-w-3xl">
-        <div className="flex justify-between gap-8">
+        <div className="flex items-center justify-between gap-8">
           <div>
-            <h1 className="text-3xl tracking-tighter noto-serif-display">
-              My Minimal Expense Tracker
+            <h1 className="flex items-center gap-1 text-3xl font-bold tracking-tight noto-serif-display">
+              <BadgeIndianRupee size={30} /> Pennywise
             </h1>
-            <p className="mt-3 leading-tight tracking-tight text-neutral-500">
-              This is a Local Finance Tracker where the data stays on your
-              device
+            <p className="mt-2 leading-tight tracking-tight text-neutral-500">
+              Your Finance Journey, Powered by Me.
             </p>
           </div>
           <ModeToggle />
