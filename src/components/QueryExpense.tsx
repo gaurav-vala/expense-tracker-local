@@ -119,7 +119,7 @@ export default function QueryExpense() {
                   </svg>
                 </p>
                 <p className="text-wrap">
-                  <span className="block w-full text-xl font-semibold tracking-tighter">
+                  <span className="block w-full text-xl font-semibold tracking-tighter ">
                     {income.name}
                   </span>
                   <span className="block font-medium">

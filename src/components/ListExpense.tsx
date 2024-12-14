@@ -22,7 +22,7 @@ export default function ListExpense() {
     <div className="sticky top-4">
       <div className="mt-4 overflow-hidden bg-neutral-100 rounded-xl dark:bg-neutral-900">
         <div className="p-4 px-9">
-          <p className="text-sm tracking-tight text-neutral-400 ">
+          <p className="text-2xl tracking-tight text-neutral-400 noto-serif-display">
             Remaining Income
           </p>
           <p className="mt-1 text-3xl font-semibold text-wrap">
@@ -31,7 +31,7 @@ export default function ListExpense() {
         </div>
         <div className="flex items-center justify-between gap-3 p-4 px-9 bg-neutral-200 dark:bg-neutral-800">
           <p className="text-wrap">
-            <span className="block text-sm tracking-tight text-neutral-400">
+            <span className="block text-xl tracking-tight text-neutral-400 noto-serif-display">
               Total Income
             </span>
             <span className="block mt-1 text-xl font-semibold">
@@ -39,7 +39,7 @@ export default function ListExpense() {
             </span>
           </p>
           <p className="w-fit text-wrap">
-            <span className="block text-sm tracking-tight text-neutral-400">
+            <span className="block text-xl tracking-tight text-neutral-400 noto-serif-display">
               Total Expenses
             </span>
             <span className="block mt-1 text-xl font-semibold">

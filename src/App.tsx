@@ -11,10 +11,10 @@ function App() {
       <div className="container px-5 mx-auto mt-6 mb-8 sm:max-w-3xl">
         <div className="flex justify-between gap-8">
           <div>
-            <h1 className="text-3xl font-extrabold tracking-tighter">
+            <h1 className="text-3xl tracking-tighter noto-serif-display">
               My Minimal Expense Tracker
             </h1>
-            <p className="text-neutral-400">
+            <p className="mt-3 leading-tight tracking-tight text-neutral-500">
               This is a Local Finance Tracker where the data stays on your
               device
             </p>

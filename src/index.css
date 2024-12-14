@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+Display:ital,wdth,wght@0,62.5,100..900;1,62.5,100..900&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -5,6 +7,14 @@
 * {
   font-family: Inter, sans-serif;
   font-feature-settings: "liga" 1, "calt" 1, "cv01", "cv11", "cv06", "cv10";
+}
+
+.noto-serif-display {
+  font-family: "Noto Serif Display", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  /* font-variation-settings: "wdth" 78;
+   */
 }
 
 @layer base {
