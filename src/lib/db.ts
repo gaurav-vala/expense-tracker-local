@@ -5,12 +5,14 @@ interface Expense {
     id: number;
     amount: number;
     name: string;
+    date: string;
 }
 
 interface Income {
     id: number;
     amount: number;
     name: string;
+    date: string;
 }
 
 const db = new Dexie('FinanceDatabase') as Dexie & {

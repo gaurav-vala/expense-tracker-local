@@ -27,6 +27,7 @@ export default function AddExpense() {
       await db.expenses.add({
         amount: parseFloat(amount), // Convert string to number when adding expense
         name,
+        date: new Date().toISOString(),
       });
 
       setAmount(""); // Reset the amount after adding the expense

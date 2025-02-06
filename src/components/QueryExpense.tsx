@@ -55,10 +55,16 @@ export default function QueryExpense() {
                   </svg>
                 </p>
                 <p>
-                  <span className="block text-xl font-semibold tracking-tighter">
-                    {expense.name}
+                  <span className="flex items-center gap-1 text-xl font-semibold tracking-tighter">
+                    {expense.name} -{" "}
+                    {expense.date &&
+                      !isNaN(new Date(expense.date).getTime()) && (
+                        <span className="text-base italic font-light text-neutral-500">
+                          - {new Date(expense.date).toLocaleString()}
+                        </span>
+                      )}
                   </span>
-                  <span className="block font-medium">
+                  <span className="block text-lg font-medium">
                     {" "}
                     ₹{formatCurrency(expense.amount)}
                   </span>
@@ -119,10 +125,15 @@ export default function QueryExpense() {
                   </svg>
                 </p>
                 <p className="text-wrap">
-                  <span className="block w-full text-xl font-semibold tracking-tighter ">
+                  <span className="flex items-center w-full gap-1 text-2xl font-semibold tracking-tighter ">
                     {income.name}
+                    {income.date && (
+                      <span className="text-base italic font-light text-neutral-500">
+                        - {new Date(income.date).toLocaleString()}
+                      </span>
+                    )}
                   </span>
-                  <span className="block font-medium">
+                  <span className="block text-lg font-medium">
                     ₹{formatCurrency(income.amount)}
                   </span>
                 </p>

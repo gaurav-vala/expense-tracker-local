@@ -12,8 +12,8 @@ export default defineConfig({
     includeAssets: ['/vite.svg', 'robots.txt', 'apple-touch-icon.png'],
     manifest: {
       name: 'Expense Tracker',
-      short_name: 'Tracker',
-      description: 'An app to track expenses',
+      short_name: 'Pennywise',
+      description: 'Your Finance Journey, Powered by Me.',
       theme_color: '#ffffff',
       icons: [
         {

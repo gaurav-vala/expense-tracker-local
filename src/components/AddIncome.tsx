@@ -40,6 +40,7 @@ export default function AddIncome() {
       await db.incomes.add({
         amount: parseFloat(amount), // Convert string to number before saving
         name,
+        date: new Date().toISOString(),
       });
 
       setAmount(""); // Reset amount after successful addition
