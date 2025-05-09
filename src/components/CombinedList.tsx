@@ -37,7 +37,8 @@ const CombinedList: React.FC = () => {
                 ...incomes.map((income) => ({ ...income, type: 'income' as 'income' })),
             ];
 
-            combined.sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime());
+            combined.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+
 
             setCombinedData(combined);
         };
