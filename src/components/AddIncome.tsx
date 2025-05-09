@@ -1,6 +1,7 @@
 import { useState } from "react";
 import {
   Drawer,
+  DrawerClose,
   DrawerContent,
   DrawerDescription,
   DrawerFooter,
@@ -85,7 +86,9 @@ export default function AddIncome() {
               {error && <p className="text-sm text-red-500">{error}</p>}
             </div>
             <DrawerFooter>
-              <Button onClick={addIncome}>Add Income</Button>
+              <DrawerClose asChild={true}>
+                <Button onClick={addIncome}>Add Income</Button>
+              </DrawerClose>
               <Button variant="outline" className="w-full">
                 Cancel
               </Button>

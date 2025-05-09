@@ -4,7 +4,10 @@ import ListExpense from "./components/ListExpense";
 import { ThemeProvider } from "./components/theme-provider";
 import { ModeToggle } from "./components/mode-toggle";
 
-import { BadgeIndianRupee } from "lucide-react";
+import { BadgeIndianRupee, Mail } from "lucide-react";
+import CombinedList from "./components/CombinedList";
+import ThemeToggle from "./components/ThemeToggle";
+import { Button } from "./components/ui/button";
 
 function App() {
   // const [theme, setTheme] = useState<Theme>(() => "dark");
@@ -21,12 +24,21 @@ function App() {
               Your Finance Journey, Powered by Me.
             </p>
           </div>
-          <ModeToggle />
+          <div className="flex items-center gap-2">
+            <Button
+              variant="outline"
+              size="icon"
+              title="Toggle theme"
+            >
+              <Mail className="w-6 h-6 text-neutral-500" />
+            </Button>
+            <ThemeToggle />
+          </div>
         </div>
 
         <ListExpense />
         <div className="mt-4">
-          <QueryExpense />
+          <CombinedList />
         </div>
       </div>
     </ThemeProvider>
