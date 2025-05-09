@@ -1,8 +1,6 @@
 import "./App.css";
-import QueryExpense from "./components/QueryExpense";
 import ListExpense from "./components/ListExpense";
 import { ThemeProvider } from "./components/theme-provider";
-import { ModeToggle } from "./components/mode-toggle";
 
 import { BadgeIndianRupee, Mail } from "lucide-react";
 import CombinedList from "./components/CombinedList";
