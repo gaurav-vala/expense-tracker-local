@@ -3,11 +3,16 @@ import path from "path"
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import { VitePWA } from 'vite-plugin-pwa';
+import { tanstackRouter } from '@tanstack/router-plugin/vite'
+
 
 
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [react(), VitePWA({
+  plugins: [tanstackRouter({
+    target: 'react',
+    autoCodeSplitting: true,
+  }), react(), VitePWA({
     registerType: 'autoUpdate',
     includeAssets: ['/vite.svg', 'robots.txt', 'apple-touch-icon.png'],
     manifest: {

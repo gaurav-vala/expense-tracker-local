@@ -1,9 +1,9 @@
 import "./App.css";
-import ListExpense from "./components/ListExpense";
 import { ThemeProvider } from "./components/theme-provider";
 
 import { BadgeIndianRupee, Mail } from "lucide-react";
-import CombinedList from "./components/CombinedList";
+import DataListing from "./components/CombinedList";
+import ExpenseData from "./components/ListExpense";
 import ThemeToggle from "./components/ThemeToggle";
 import { Button } from "./components/ui/button";
 
@@ -34,9 +34,9 @@ function App() {
           </div>
         </div>
 
-        <ListExpense />
+        <ExpenseData />
         <div className="mt-4">
-          <CombinedList />
+          <DataListing />
         </div>
       </div>
     </ThemeProvider>
