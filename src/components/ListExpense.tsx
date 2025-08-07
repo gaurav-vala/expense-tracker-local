@@ -1,10 +1,10 @@
 import { db } from "@/lib/db";
 import { useLiveQuery } from "dexie-react-hooks";
-import { useMemo, useState, useEffect } from "react";
-import { TrendingUp, TrendingDown, Wallet, Target, AlertCircle, ChevronUp, ChevronDown, Calendar, RotateCcw } from "lucide-react";
-import { motion, AnimatePresence } from "framer-motion";
-import AddIncome from "./AddIncome";
+import { AnimatePresence, motion } from "framer-motion";
+import { ChevronDown, ChevronUp, TrendingDown, TrendingUp, Wallet } from "lucide-react";
+import { useEffect, useMemo, useState } from "react";
 import AddExpense from "./AddExpense";
+import AddIncome from "./AddIncome";
 
 interface FinancialStats {
   totalIncomes: number;
@@ -90,8 +90,8 @@ const getMonthBoundaries = (year: number, month: number) => {
 
 export default function ExpenseData() {
   const [showDetails, setShowDetails] = useState(false);
-  const [selectedMonth, setSelectedMonth] = useState<string>('current');
-  const [showMonthSelector, setShowMonthSelector] = useState(false);
+  const [selectedMonth, _setSelectedMonth] = useState<string>('current');
+  // const [showMonthSelector, setShowMonthSelector] = useState(false);
 
   const expenses = useLiveQuery(() => db.expenses.toArray(), []);
   const incomes = useLiveQuery(() => db.incomes.toArray(), []);

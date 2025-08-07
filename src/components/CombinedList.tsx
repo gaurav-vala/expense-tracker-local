@@ -1,8 +1,8 @@
-import React, { useEffect, useState, useCallback } from 'react';
-import { db, Expense, Income } from '../lib/db';
-import { motion, AnimatePresence } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
+import { AlertCircle, Calendar, Trash } from 'lucide-react';
+import React, { useCallback, useEffect, useState } from 'react';
+import { db } from '../lib/db';
 import { Button } from './ui/button';
-import { Trash, AlertCircle, Calendar } from 'lucide-react';
 
 interface CombinedItem {
     id: number;
@@ -89,21 +89,21 @@ const DataListing: React.FC<DataListingProps> = ({ onDataChange }) => {
         }).format(amount);
     };
 
-    const formatDate = (dateString: string): string => {
-        const date = new Date(dateString);
-        const now = new Date();
-        const diffTime = now.getTime() - date.getTime();
-        const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
+    // const formatDate = (dateString: string): string => {
+    //     const date = new Date(dateString);
+    //     const now = new Date();
+    //     const diffTime = now.getTime() - date.getTime();
+    //     const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
 
-        if (diffDays === 0) return 'Today';
-        if (diffDays === 1) return 'Yesterday';
-        if (diffDays < 7) return `${diffDays} days ago`;
+    //     if (diffDays === 0) return 'Today';
+    //     if (diffDays === 1) return 'Yesterday';
+    //     if (diffDays < 7) return `${diffDays} days ago`;
 
-        return date.toLocaleDateString('en-IN', {
-            day: 'numeric',
-            month: 'short'
-        });
-    };
+    //     return date.toLocaleDateString('en-IN', {
+    //         day: 'numeric',
+    //         month: 'short'
+    //     });
+    // };
 
     useEffect(() => {
         fetchData();
